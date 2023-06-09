@@ -109,3 +109,9 @@ In this screenshot we can see we have chosen "Custom autoscale" and then selecte
 We then set the "Instance limits" to 3 and 6, this means that the VMSS will scale between 3 and 6 instances based on the metric value starting off with the default 3. 
 On the right hand side of the screenshot we can set the metric threshold so that when this is exceeded the VMSS will spawn a new instance. We can also set the
 time to monitor the metric over when making this decision and how long to cool down for (i.e. make no scaling decisions) after a scale event.
+
+## Conclusion
+
+Azure Monitor custom metrics provide a useful way to control the scalling of a Virtual Machine Scale Set with a metric of your choice. With this 
+approach you can scale up and down in response to demand without having to define lots of control logic yourself you can simply publish the 
+metric and then define scaling rules that respond to it.
